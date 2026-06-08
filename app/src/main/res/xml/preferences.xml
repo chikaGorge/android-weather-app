@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.example.weatherforecast.ui.settings.CustomUserPreference
+        android:key="user_profile"
+        android:title="User Profile"
+        android:summary="Edit your profile"/>
+
+    <!-- 默认城市选择 -->
+    <Preference
+        android:key="default_city_picker"
+        android:title="修改默认城市"
+        android:summary="请选择省市区"
+        android:defaultValue="未选择城市"
+        android:layout_gravity="start"/>
+
+    <!-- 感兴趣城市选择 -->
+    <Preference
+        android:key="interested_city"
+        android:title="感兴趣的城市"
+        android:summary="请选择省市区"
+        android:defaultValue="未选择城市"
+        android:layout_gravity="start"/>
+
+    <!-- 历史城市数量 -->
+    <EditTextPreference
+        android:key="history_city_count"
+        android:title="历史城市数量"
+        android:summary="历史城市的显示数量：%s"
+        android:defaultValue="5"
+        android:inputType="number"
+        android:layout_gravity="start"/>
+
+    <!-- 自动登录设置 -->
+    <SwitchPreference
+        android:key="automatic_logon_enabled"
+        android:title="自动登录"
+        android:summary="是否开启自动登录"
+        android:defaultValue="false"
+        android:layout_gravity="start"/>
+</PreferenceScreen>

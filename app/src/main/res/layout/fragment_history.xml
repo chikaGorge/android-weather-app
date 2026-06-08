@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="2"
+    android:paddingBottom="56dp">
+<!--        左上角表格-->
+    <HorizontalScrollView
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:fillViewport="true"
+        android:layout_margin="4dp">
+        <ScrollView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TableLayout
+                android:id="@+id/table_cities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"/>
+        </ScrollView>
+    </HorizontalScrollView>
+
+<!--    右上角温度折线+柱形-->
+    <lecho.lib.hellocharts.view.ComboLineColumnChartView
+        android:id="@+id/combo_chart_temperature"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"/>
+<!--    左下角柱形-->
+    <lecho.lib.hellocharts.view.ColumnChartView
+        android:id="@+id/column_chart_humidity"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="4dp"/>
+<!--    右下角泡泡-->
+    <lecho.lib.hellocharts.view.BubbleChartView
+        android:id="@+id/bubble_chart_wind"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"/>
+</GridLayout>
